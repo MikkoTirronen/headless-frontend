@@ -4,8 +4,15 @@ import { gql } from "@apollo/client";
 import { client } from "../lib/apollo";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
+import { useEffect, useState } from "react";
 
 export default function Home({ posts }) {
+  const [innerData, setInnerData] = useState("");
+
+  useEffect((posts) => setInnerData(posts), []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,17 +22,37 @@ export default function Home({ posts }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>My Wordpress site!</h1>
-        <p>here</p>
-        <ul>
-          {posts.map(({ postId, slug, title }) => (
-            <li key={postId}>
-              <Link href={`blog/${slug}`}>
-                <a>{title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="container">
+          <div className="row">
+            <Navbar></Navbar>
+          </div>
+
+          <div className="row d-flex justify-content-center">
+            <div className="col">
+              <h1 className={styles.title}>My Wordpress site!</h1>
+            </div>
+          </div>
+          <div className="row ">
+            <div className="row"></div>
+            <div className="col-sm-6 mx-auto">
+              <ul>
+                {posts.map(({ postId, slug, title, content }) => (
+                  <li key={postId}>
+                    <h4>
+                      <Link href={`blog/${slug}`}>
+                        <a styles={styles.link}>{title}</a>
+                      </Link>
+                    </h4>
+                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+
+        <div className="container"></div>
       </main>
     </div>
   );
