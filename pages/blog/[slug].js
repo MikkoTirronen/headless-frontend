@@ -1,11 +1,29 @@
 import { gql } from "@apollo/client";
 import { client } from "../../lib/apollo";
+import Navbar from "../components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "../../styles/Home.module.css";
 
 export default function BlogPage({ post }) {
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+    <div className="container">
+      <div className="row col-12">
+        <div className="col-12">
+          <Navbar></Navbar>
+        </div>
+      </div>
+      <div className="row col-12">
+        <div className="col-12">
+          <h1 className={styles.title}>{post.title}</h1>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-6">
+          <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+        </div>
+        <div className="col-2"></div>
+      </div>
     </div>
   );
 }
