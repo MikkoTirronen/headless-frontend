@@ -1,15 +1,16 @@
 import { gql } from "@apollo/client";
 import { client } from "../../lib/apollo";
-import Navbar from "../components/Navbar";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../../styles/Home.module.css";
+import NavigationBar from "../components/NavigationBar";
 
 export default function BlogPage({ post }) {
   return (
     <div className="container">
       <div className="row col-12">
         <div className="col-12">
-          <Navbar></Navbar>
+          <NavigationBar/>
         </div>
       </div>
       <div className="row col-12">
