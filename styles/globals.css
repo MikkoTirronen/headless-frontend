@@ -1,5 +1,7 @@
 #__next {
   background-color: rgb(35, 63, 99);
+  width: 100vw;
+  height: 100%;
 }
 #__next li.nav-item {
   font-size: 20px;
@@ -10,15 +12,12 @@
   background-color: rgb(36, 34, 32);
   color: antiquewhite;
   max-width: 800px;
-  
+  height: 100%;
 }
 .container img {
   max-width: 320px;
-  height: auto;
+  height: fit-content;
 }
 .container ul {
-  
   max-width: 800px;
-  
- 
 }

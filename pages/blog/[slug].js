@@ -7,25 +7,13 @@ import NavigationBar from "../components/NavigationBar";
 
 export default function BlogPage({ post }) {
   return (
-    <div className="container">
-      <div className="row col-12">
-        <div className="col-12">
-          <NavigationBar/>
-        </div>
+    <>
+      <NavigationBar />
+      <div className="container d-flex flex-column justify-content-center">
+        <h1 className="">{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
       </div>
-      <div className="row col-12">
-        <div className="col-12">
-          <h1 className={styles.title}>{post.title}</h1>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-2"></div>
-        <div className="col-6">
-          <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-        </div>
-        <div className="col-2"></div>
-      </div>
-    </div>
+    </>
   );
 }
 
