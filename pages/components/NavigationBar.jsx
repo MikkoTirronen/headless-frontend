@@ -55,10 +55,9 @@ export default function NavigationBar() {
             <li>
                <Link href="/"><a className="nav-item">HOME</a></Link>
             </li>
-           
             {pathList &&
               pathList.data.pages.nodes.map((path, index) => {
-                console.log(encodeURIComponent(path.slug));
+                
                 return (
                   <li key={path.id} className="nav-item ">
                     <Link
