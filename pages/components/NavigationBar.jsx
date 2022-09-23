@@ -13,7 +13,7 @@ export default function NavigationBar() {
   //   }, []);
 
   useEffect(() => {
-    fetch(`https://13.50.16.196/graphql`, {
+    fetch(`http://13.50.16.196/graphql`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

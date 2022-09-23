@@ -32,7 +32,11 @@ export default function Home({ posts }) {
                         <a>{title}</a>
                       </Link>
                     </h4>
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: content.replace("http", "https"),
+                      }}
+                    ></div>
                   </li>
                 ))}
               </ul>
