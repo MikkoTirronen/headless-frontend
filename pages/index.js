@@ -18,12 +18,12 @@ export default function Home({ posts }) {
       </Head>
       <NavigationBar />
       <div className="container bg-dark text-light ">
-        <main className="">
+        <main className="main">
           <div>
             <div className=" d-flex justify-content-center  flex-column">
-              <h1 className="no-wrap m-auto">My Wordpress site!</h1>
+              <h1 className="no-wrap m-auto mt-5">My Wordpress site!</h1>
 
-              <ul className="m-auto">
+              <ul className="m-auto mt-3">
                 {console.log(posts)}
                 {posts.map(({ postId, slug, title, content }) => (
                   <li key={postId}>

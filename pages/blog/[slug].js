@@ -1,17 +1,20 @@
 import { gql } from "@apollo/client";
 import { client } from "../../lib/apollo";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "../../styles/Home.module.css";
 import NavigationBar from "../components/NavigationBar";
 
 export default function BlogPage({ post }) {
   return (
     <>
       <NavigationBar />
-      <div className="container d-flex flex-column justify-content-center">
-        <h1 className="">{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      <div className="container">
+        <div className="container d-flex flex-column vh-100">
+          <h1 className="pt-5 text-center">{post.title}</h1>
+          <div
+            className="pt-3"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          ></div>
+        </div>
       </div>
     </>
   );
