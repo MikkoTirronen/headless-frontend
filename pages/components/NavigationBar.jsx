@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-import { Nav, Navbar, NavLink } from "react-bootstrap";
+import { Nav, Navbar} from "react-bootstrap";
 
 export default function NavigationBar() {
   const [pathList, setPathList] = useState(null);

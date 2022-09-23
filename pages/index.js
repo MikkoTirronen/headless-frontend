@@ -9,10 +9,6 @@ import NavigationBar from "./components/NavigationBar";
 import { useEffect, useState } from "react";
 
 export default function Home({ posts }) {
-  const [innerData, setInnerData] = useState("");
-
-  useEffect((posts) => setInnerData(posts), []);
-
   return (
     <>
       <Head>
@@ -28,11 +24,12 @@ export default function Home({ posts }) {
               <h1 className="no-wrap m-auto">My Wordpress site!</h1>
 
               <ul className="m-auto">
+                {console.log(posts)}
                 {posts.map(({ postId, slug, title, content }) => (
                   <li key={postId}>
                     <h4>
                       <Link href={`blog/${slug}`}>
-                        <a styles={styles.link}>{title}</a>
+                        <a>{title}</a>
                       </Link>
                     </h4>
                     <div dangerouslySetInnerHTML={{ __html: content }}></div>
