@@ -13,7 +13,7 @@ export default function NavigationBar() {
   //   }, []);
 
   useEffect(() => {
-    fetch(`http://13.50.16.196/graphql`, {
+    fetch(`https://13.50.16.196/graphql`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,14 +50,15 @@ export default function NavigationBar() {
         aria-label="Toggle navigation"
       ></Navbar.Toggle>
       <Navbar.Collapse id="navbarSupportedContent">
-        <Nav className ="container-fluid">
+        <Nav className="container-fluid">
           <ul className="navbar-nav mb-lg-0 m-auto">
             <li>
-               <Link href="/"><a className="nav-item">HOME</a></Link>
+              <Link href="/">
+                <a className="nav-item">HOME</a>
+              </Link>
             </li>
             {pathList &&
               pathList.data.pages.nodes.map((path, index) => {
-                
                 return (
                   <li key={path.id} className="nav-item ">
                     <Link
