@@ -13,7 +13,7 @@ export default function NavigationBar() {
   //   }, []);
 
   useEffect(() => {
-    fetch(`http://13.50.72.223/graphql`, {
+    fetch(`https://wordpress.mikkotirronen.com/graphql`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
