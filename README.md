@@ -1,9 +1,20 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
-First, run the development server:
-
+#Backend Requirements:
+  -install MAMP
+  -download a copy of wordpress from http://wordpress.org
+#Local development Backend Setup:
+  1. In MAMP configure your preferences to point the document root to your wordpress download
+  2. In Port settings of your preferences I recommend using the MAMP defaults
+     *Take note of the mysql address you will need this later in the wordpress install
+  3. Click on the Open Webstart Page
+  4. Under tools go to php admin
+  5. Click on Database in the Navigation Menu and create Database
+    *Take note of this name as you will need it in the wordpress install
+    *Take note of User Page here if you are uncertain what user account will have access to connect to the database
+  6. Go To [http://localhost:8888] if you clicked on use MAMP Defaults in the Port section of the install otherwise use what            localhost you decided on.
+  
 ```bash
 npm run dev
 # or
