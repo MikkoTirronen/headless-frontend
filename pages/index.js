@@ -5,7 +5,6 @@ import { client } from "../lib/apollo";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "./components/NavigationBar";
 
-
 export default function Home({ posts }) {
   return (
     <>
@@ -15,10 +14,10 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico"></link>
       </Head>
       <NavigationBar />
-      <div className="container bg-dark text-light ">
+      <div className="container bg-dark text-light">
         <main className="main">
           <div>
-            <div className=" d-flex justify-content-center  flex-column">
+            <div className="d-flex justify-content-center flex-column">
               <h1 className="no-wrap m-auto mt-5">My Wordpress site!</h1>
 
               <ul className="m-auto mt-3">
@@ -32,7 +31,7 @@ export default function Home({ posts }) {
                     </h4>
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: content
+                        __html: content,
                       }}
                     ></div>
                   </li>
