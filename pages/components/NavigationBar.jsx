@@ -6,12 +6,6 @@ import { Nav, Navbar } from "react-bootstrap";
 export default function NavigationBar() {
   const [pathList, setPathList] = useState(null);
 
-  //   useEffect(() => {
-  //     fetch(`http://13.50.16.196/pages`)
-  //       .then((res) => res.json())
-  //       .then((data) => setPathList(data));
-  //   }, []);
-
   useEffect(() => {
     fetch(`https://${process.env.NEXT_PUBLIC_API_URL}/graphql`, {
       method: "POST",

@@ -13,6 +13,17 @@
 #__next nav.ul{
   width:100vw;
 }
+#__next h4{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#__next a:hover {
+font-weight: 800;
+color:rgb(8, 8, 95);
+}
+#__next h4 a:hover{
+  color:rgb(252, 252, 252);
+}
 
 .container {
   background-color: rgb(149, 92, 36);

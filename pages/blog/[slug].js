@@ -7,8 +7,8 @@ export default function BlogPage({ post }) {
   return (
     <>
       <NavigationBar />
-      <div className="container">
-        <div className="container d-flex flex-column vh-100">
+      <div className="container-fluid">
+        <div className="container d-flex flex-column">
           <h1 className="pt-5 text-center">{post.title}</h1>
           <div
             className="pt-3"
