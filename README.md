@@ -12,17 +12,22 @@ Hosted on AWS Lightsail
 
 There are three main integrations at this point:
 
-    1. Github --> Vercel
-       Every push to the main branch will trigger a new deployment on vercel.
+1. Github --> Vercel
+    *Every push to the main branch will trigger a new deployment on vercel.
 
-    2. Wordpress --> Zapier --> Discord
-       Every new post will create a new message in the general chat of my Discord server with links to the new post. This is acheived through the wordpress Plugin Zapier.
+2. Wordpress --> Zapier --> Discord
+    *Every new post will create a new message in the general chat of my Discord 
+    server with links to the new post. This is acheived through the wordpress Plugin Zapier.
 
-    3. Wordpress --> Zapier --> vercel
-       Every new post and updated post will trigger a new build on vercel through a post request sent by Zapier Webhooks.
+3. Wordpress --> Zapier --> vercel
+    *Every new post and updated post will trigger a new build on vercel through a 
+    post request sent by Zapier Webhooks.
 
-    4. Discord --> Zapier--> Wordpress (not actived at the moment)
-        I did also manage to create an integration from a discord message to a draft in wordpress that could be then published however since the content on my frontend uses the dangerouslysetHTML attribute I wondered if this was actually a good idea. Dilemas aside, its possible.
+4. Discord --> Zapier--> Wordpress (not actived at the moment)
+    *I did also manage to create an integration from a discord message to a draft in wordpress 
+    that could be then published however since the content on my frontend uses the 
+    dangerouslysetHTML attribute I wondered if this was actually a good idea. 
+    Dilemas aside, its possible.
 
 \*Side Note: Zapier is a Subscription based plugin with a 14 day trial that will expire around 10/10/22 at which point the last three integrations will not work.
 
