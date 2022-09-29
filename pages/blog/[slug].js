@@ -10,6 +10,18 @@ export default function BlogPage({ post }) {
       <div className="container-fluid">
         <div className="container d-flex flex-column">
           <h1 className="pt-5 text-center">{post.title}</h1>
+          {post.featuredImage !== null ? (
+            <>
+              <picture>
+                <img
+                  src={post.featuredImage.node.sourceUrl}
+                  alt={post.title}
+                ></img>
+              </picture>
+            </>
+          ) : (
+            ""
+          )}
           <div
             className="pt-3"
             dangerouslySetInnerHTML={{ __html: post.content }}
@@ -49,6 +61,11 @@ export async function getStaticProps({ params }) {
     query: gql`
       query GetWordPressSlug($slug: String!) {
         postBy(slug: $slug) {
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
           title
           content
         }
