@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import { gql } from "@apollo/client";
 import { client } from "../lib/apollo";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,8 +21,9 @@ export default function Home({ posts }) {
               <ul className="m-auto mt-3">
                 {console.log(posts)}
                 {posts.map(
-                  ({ postId, slug, title, content, featuredImage }) => (
+                  ({ postId, slug, title, content, featuredImage,date }) => (
                     <li key={postId}>
+                      <span>{date}</span>
                       <h4>
                         <Link href={`blog/${slug}`}>
                           <a>{title}</a>
