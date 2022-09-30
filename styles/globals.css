@@ -18,12 +18,26 @@ html {
 #__next h4 {
   margin-bottom: 25px;
 }
-#__next a:hover {
+#__next a:hover:not(.skip-link) {
   font-weight: 800;
   color: rgb(8, 8, 95);
 }
 #__next h4 a:hover {
   color: rgb(252, 252, 252);
+}
+
+#__next #skip-link {
+  position:fixed;
+  text-align: center;
+  color: white !important;
+  background-color: #333;
+  padding: 2rem;
+  translate: 0 -100%;
+  transition: translate 150ms ease-in-out;
+  font-size: 16px;
+}
+#__next #skip-link:focus {
+  translate: 0 60%;
 }
 
 .containerxtra {
@@ -58,3 +72,4 @@ html {
   min-width: 150px;
   align-self: center;
 }
+

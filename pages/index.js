@@ -17,16 +17,32 @@ export default function Home({ posts, categories }) {
       <Head>
         <title>Headless CMS</title>
       </Head>
-      
+      <div className="container">
+        <a id="skip-link" className="skip-link" href="#main-content">
+          skip to main content
+        </a>
+        <a id="skip-link" className="skip-link" href="#categories">
+          skip to categories
+        </a>
+        <a id="skip-link" className="skip-link" href="#search">
+          skip to search
+        </a>
+        <a id="skip-link" className="skip-link" href="#blog">
+          skip to search
+        </a>
+      </div>
+
       <NavigationBar />
       <div className="container bg-dark text-light">
-        <main id="#main-content" className="main">
+        <main id="main-content" className="main">
           <div>
             <div className="d-flex justify-content-center flex-column">
               <h1 className="no-wrap m-auto mt-5">Headless Wordpress</h1>
               <div className="m-auto mt-3">
                 <Navbar>
-                  <p className="categories">Categories:</p>
+                  <p id="categories" className="categories">
+                    Categories:
+                  </p>
                   {categories.map(({ name }, index) => (
                     <div key={index} className="categories">
                       <Link
@@ -43,6 +59,7 @@ export default function Home({ posts, categories }) {
               </div>
               <div className="mt-3 input-group pe-5 ps-5 inputcss">
                 <input
+                  id="search"
                   type="text"
                   value={searchValue}
                   placeholder="Enter value"
@@ -58,8 +75,7 @@ export default function Home({ posts, categories }) {
                   <a className="btn btn-primary">Search</a>
                 </Link>
               </div>
-              <ul id="#main-content" className="m-auto mt-3">
-                {console.log(posts)}
+              <ul id="blog" className="m-auto mt-3">
                 {posts.map(
                   ({ postId, slug, title, content, featuredImage, date }) => (
                     <li key={postId}>
@@ -76,7 +92,7 @@ export default function Home({ posts, categories }) {
                             <img
                               src={featuredImage.node.sourceUrl}
                               alt={title}
-                            />
+                            ></img>
                           </picture>
                         </>
                       ) : (
