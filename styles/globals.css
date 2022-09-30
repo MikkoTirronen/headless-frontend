@@ -24,7 +24,7 @@ html {
   color: rgb(8, 8, 95);
 }
 #__next h4 a:hover {
-  color: rgb(252, 252, 252);
+  color: rgb(252, 252, 252)!important;
 }
 
 #__next #skip-link-1 {
