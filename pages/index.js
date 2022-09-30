@@ -17,7 +17,7 @@ export default function Home({ posts, categories }) {
       <Head>
         <title>Headless CMS</title>
       </Head>
-      <Link href="#main-content"><a >skip to main content</a></Link>
+      
       <NavigationBar />
       <div className="container bg-dark text-light">
         <main id="#main-content" className="main">
