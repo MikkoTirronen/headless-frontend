@@ -1,11 +1,9 @@
 html {
-  
   background-color: rgb(35, 63, 99);
 }
 #__next {
   background-color: rgb(35, 63, 99);
   width: 100vw;
-  
 }
 
 #__next a.nav-item {
@@ -18,7 +16,6 @@ html {
   width: 100vw;
 }
 #__next h4 {
- 
   margin-bottom: 25px;
 }
 #__next a:hover {
@@ -48,11 +45,16 @@ html {
   height: 100%;
 }
 
-.categories a{
+.categories a {
   padding: 5;
   margin-left: 15px;
   font-size: larger;
 }
-.categories  a:hover{
+.categories a:hover {
   color: rgb(228, 235, 228) !important;
+}
+.inputcss {
+  max-width: 500px;
+  min-width: 150px;
+  align-self: center;
 }
