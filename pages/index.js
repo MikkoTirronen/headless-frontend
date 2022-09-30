@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 export default function Home({ posts, categories }) {
   const router = useRouter();
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState(" ");
 
   return (
     <>
