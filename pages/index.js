@@ -67,6 +67,7 @@ export default function Home({ posts, categories }) {
                   onChange={(e) => setSearchValue(e.target.value)}
                 />
                 <Link
+                  prefetch={false}
                   href={{
                     pathname: `search/${searchValue}`,
                     query: searchValue,
