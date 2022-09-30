@@ -76,7 +76,7 @@ export default function CategoryPage() {
             </>
           ))}
         <Link href="/">
-          <a className="btn btn-secondary">
+          <a>
             <h3 className="text-center pb-5">Back to Home</h3>
           </a>
         </Link>
