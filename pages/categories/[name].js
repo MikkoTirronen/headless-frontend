@@ -40,6 +40,7 @@ export default function CategoryPage() {
       })
         .then((res) => res.json())
         .then((data) => setCategoryData(data.data.posts.nodes));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
