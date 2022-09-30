@@ -1,14 +1,14 @@
 import { gql } from "@apollo/client";
 import { client } from "../../lib/apollo";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavigationBar from "../components/NavigationBar";
+import NavigationBar from "../../components/NavigationBar";
 
 export default function BlogPage({ post }) {
   return (
     <>
       <NavigationBar />
       <div className="container-fluid">
-        <div className="container d-flex flex-column">
+        <div className="container containerxtra d-flex flex-column p-5">
           <h1 className="pt-5 text-center">{post.title}</h1>
           {post.featuredImage !== null ? (
             <>

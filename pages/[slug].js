@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 import { client } from "../lib/apollo";
-import NavigationBar from "./components/NavigationBar";
+import NavigationBar from "../components/NavigationBar";
 import "bootstrap/dist/css/bootstrap.css";
 export default function Page({ page }) {
   return (

@@ -29,7 +29,7 @@ html {
   color: rgb(252, 252, 252);
 }
 
-.container {
+.containerxtra {
   background-color: rgb(149, 92, 36);
   color: white;
   max-width: 800px;
@@ -46,4 +46,13 @@ html {
 
 .main {
   height: 100%;
+}
+
+.categories a{
+  padding: 5;
+  margin-left: 15px;
+  font-size: larger;
+}
+.categories  a:hover{
+  color: rgb(228, 235, 228) !important;
 }
