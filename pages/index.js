@@ -17,9 +17,10 @@ export default function Home({ posts, categories }) {
       <Head>
         <title>Headless CMS</title>
       </Head>
+      <Link href="#main-content"><a >skip to main content</a></Link>
       <NavigationBar />
       <div className="container bg-dark text-light">
-        <main className="main">
+        <main id="#main-content" className="main">
           <div>
             <div className="d-flex justify-content-center flex-column">
               <h1 className="no-wrap m-auto mt-5">Headless Wordpress</h1>
@@ -39,7 +40,7 @@ export default function Home({ posts, categories }) {
                     </div>
                   ))}
                 </Navbar>
-              </div>{" "}
+              </div>
               <div className="mt-3 input-group pe-5 ps-5 inputcss">
                 <input
                   type="text"
@@ -57,7 +58,7 @@ export default function Home({ posts, categories }) {
                   <a className="btn btn-primary">Search</a>
                 </Link>
               </div>
-              <ul className="m-auto mt-3">
+              <ul id="#main-content" className="m-auto mt-3">
                 {console.log(posts)}
                 {posts.map(
                   ({ postId, slug, title, content, featuredImage, date }) => (
@@ -75,7 +76,7 @@ export default function Home({ posts, categories }) {
                             <img
                               src={featuredImage.node.sourceUrl}
                               alt={title}
-                            ></img>
+                            />
                           </picture>
                         </>
                       ) : (
