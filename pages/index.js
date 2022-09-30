@@ -18,16 +18,16 @@ export default function Home({ posts, categories }) {
         <title>Headless CMS</title>
       </Head>
       <div className="container">
-        <a id="skip-link" className="skip-link" href="#main-content">
+        <a id="skip-link-1" className="skip-link" href="#main-content">
           skip to main content
         </a>
-        <a id="skip-link" className="skip-link" href="#categories">
+        <a id="skip-link-2" className="skip-link" href="#categories">
           skip to categories
         </a>
-        <a id="skip-link" className="skip-link" href="#search">
+        <a id="skip-link-3" className="skip-link" href="#search">
           skip to search
         </a>
-        <a id="skip-link" className="skip-link" href="#blog">
+        <a id="skip-link-4" className="skip-link" href="#blog">
           skip to blog
         </a>
       </div>
