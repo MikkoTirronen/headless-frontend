@@ -11,32 +11,30 @@ export default function Home({ posts, categories }) {
   return (
     <>
       <Head>
-        <title>Wordpress Site</title>
+        <title>Headless CMS</title>
       </Head>
       <NavigationBar />
       <div className="container bg-dark text-light">
         <main className="main">
           <div>
             <div className="d-flex justify-content-center flex-column">
-              <h1 className="no-wrap m-auto mt-5">My Headless Frontend</h1>
+              <h1 className="no-wrap m-auto mt-5">Headless Wordpress</h1>
 
               <div className="m-auto mt-3">
                 <Navbar>
-                  <p className="categories">
-                    Categories:</p>
-                    {categories.map(({ name }, index) => (
-                      <div key={index} className ="categories">
-                        <Link
-                          href={{
-                            pathname: `categories/${name}`,
-                            query: name,
-                          }}
-                        >
-                          <a >{name}</a>
-                        </Link>
-                      </div>
-                    ))}
-                  
+                  <p className="categories">Categories:</p>
+                  {categories.map(({ name }, index) => (
+                    <div key={index} className="categories">
+                      <Link
+                        href={{
+                          pathname: `categories/${name}`,
+                          query: name,
+                        }}
+                      >
+                        <a>{name}</a>
+                      </Link>
+                    </div>
+                  ))}
                 </Navbar>
               </div>
               <ul className="m-auto mt-3">
