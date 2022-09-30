@@ -28,7 +28,7 @@ export default function Home({ posts, categories }) {
           skip to search
         </a>
         <a id="skip-link" className="skip-link" href="#blog">
-          skip to search
+          skip to blog
         </a>
       </div>
 
