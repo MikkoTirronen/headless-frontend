@@ -6,10 +6,11 @@ import { useRouter } from "next/router";
 
 export default function CategoryPage() {
   const router = useRouter();
+  console.log(router.query)
   const data = router.query;
-  const category = data.name;
+  const myvalue = data.search;
 
-  const [categoryData, setCategoryData] = useState(null);
+  const [resultData, setResultData] = useState(null);
   useEffect(() => {
     data &&
       fetch(`https://${process.env.NEXT_PUBLIC_API_URL}/graphql`, {
@@ -20,7 +21,7 @@ export default function CategoryPage() {
         body: JSON.stringify({
           query: `
         {
-          posts(where: {categoryName: "${category}"}) {
+          posts(where: {search: "${myvalue}"}) {
               nodes {
                 date
                 content
@@ -39,17 +40,18 @@ export default function CategoryPage() {
         }),
       })
         .then((res) => res.json())
-        .then((data) => setCategoryData(data.data.posts.nodes));
+        .then((data) => setResultData(data.data.posts.nodes));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
-      <NavigationBar></NavigationBar>
+      <NavigationBar />
       <div className="container containerxtra">
-        <h1 className="text-center pt-5">Category: {data && category} </h1>
+        {data && console.log(myvalue)}
+        <h1 className="text-center pt-5">Search: {data && myvalue} </h1>
 
-        {categoryData &&
-          categoryData.map((post) => (
+        {resultData &&
+          resultData.map((post) => (
             <>
               <div className=" d-flex flex-column pe-5 ps-5">
                 <h1 className="pt-5 text-center">{post.title}</h1>
@@ -74,7 +76,7 @@ export default function CategoryPage() {
             </>
           ))}
         <Link href="/">
-          <a>
+          <a className="btn btn-secondary">
             <h3 className="text-center pb-5">Back to Home</h3>
           </a>
         </Link>

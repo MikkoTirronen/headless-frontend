@@ -6,8 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "../components/NavigationBar";
 import { Navbar } from "react-bootstrap";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Home({ posts, categories }) {
+  const router = useRouter();
+  const [searchValue, setSearchValue] = useState("");
+
   return (
     <>
       <Head>
@@ -19,7 +23,6 @@ export default function Home({ posts, categories }) {
           <div>
             <div className="d-flex justify-content-center flex-column">
               <h1 className="no-wrap m-auto mt-5">Headless Wordpress</h1>
-
               <div className="m-auto mt-3">
                 <Navbar>
                   <p className="categories">Categories:</p>
@@ -36,6 +39,23 @@ export default function Home({ posts, categories }) {
                     </div>
                   ))}
                 </Navbar>
+              </div>{" "}
+              <div className="mt-3 input-group pe-5 ps-5 inputcss">
+                <input
+                  type="text"
+                  value={searchValue}
+                  placeholder="Enter value"
+                  className="form-control"
+                  onChange={(e) => setSearchValue(e.target.value)}
+                />
+                <Link
+                  href={{
+                    pathname: `search/${searchValue}`,
+                    query: searchValue,
+                  }}
+                >
+                  <a className="btn btn-primary">Search</a>
+                </Link>
               </div>
               <ul className="m-auto mt-3">
                 {console.log(posts)}
