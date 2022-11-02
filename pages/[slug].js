@@ -7,13 +7,11 @@ export default function Page({ page }) {
     <div className="">
       <NavigationBar />
 
-      <main className="container bg-dark text-light">
-        <div className="container-fluid vh-100 pt-5">
+      <main className="container bg-dark text-light containerfix">
+        <div className="container-fluid pt-5 ">
           <div className=" d-flex flex-column align-content-left">
             <ul className="m-auto">
-              <h1 className="no-wrap m-auto pb-3 text-center">
-                {page.title}
-              </h1>
+              <h1 className="no-wrap m-auto pb-3 text-center">{page.title}</h1>
               <div dangerouslySetInnerHTML={{ __html: page.content }}></div>
             </ul>
           </div>
